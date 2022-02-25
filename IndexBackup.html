@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8"/>
+        <title> Juanita Sarmiento, student.</title>
+    </head>
+    <body>
+        <main id="main-holder">
+            <h1>Login</h1>
+            <form id="login-form">
+                <!-- Usuario -->
+                <input id="username-field" name="username" type="text" placeholder="Username">
+                <!-- Contraseña -->
+                <input id="password-field" name="password" type="password" placeholder="Password"> 
+                <!-- Botón Iniciar sesión -->
+                <input id="login-for-submit" type="submit" value="Login">
+            </form>
+        </main>
+    </body>
+    <script>
+        const loginForm = document.getElementById("login-form");
+        const loginButton = document.getElementById("login-for-submit");
+
+        loginButton.addEventListener("click", (e) =>{
+            e.preventDefault();
+            const user = loginForm.username.value;
+            const pass = loginForm.password.value;
+
+            if(user === "juanitasarco" && pass === "web")
+            {
+                alert("Sesión iniciada ");
+            }
+            else
+            {
+                alert("Que te pasa viejo, estás viendo Netflix o qué?");
+            }
+        });
+    </script>
+    <style>
+        body{
+            background-color: blueviolet;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            justify-items: center;
+            align-items: center;
+            display: grid;
+        }
+        #main-holder{
+            width: 50%;
+            height: 120%;
+            display: grid;
+            background-color: rgb(184, 132, 185);
+            justify-items: center;
+            align-items: center;
+
+        }
+        #login-form{
+            align-self: flex-start;
+            display: grid;
+            justify-items: center;
+            align-items: center;
+        }
+    </style>
+</html>
